@@ -1,77 +1,68 @@
 package sample.Controllers.StudentControllers;
 
+import edu.duke.FileResource;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
+import sample.NeededClasses.ImplOfInterfaces.*;
+import sample.NeededClasses.ImplOfInterfaces.Student.SaveBooksToStudent;
+import sample.NeededClasses.Interfaces.*;
+import sample.NeededClasses.Interfaces.Student.GetTheBooksBackToStudent;
 import sample.NeededClasses.Student;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-
+import java.io.*;
 public class StudentLibraryController {
 
-    protected Student student;
+    public Student student;
     @FXML private Pane mainPane;
     @FXML private Label questionLabel;
     @FXML private Button getBookButton;
     @FXML private Button listBooksButton;
-    @FXML private Button babckToLoginButton;
+    @FXML private Button backToLoginButton;
+    ChangeThePage pageChanger = new PageChange();
+    GetTheLastLine lastLineGetter = new LastLineReturner();
+    RemovingTheLine lineRemover = new LineRemover();
 
     @FXML
     void backToLoginButtonPressed(ActionEvent event) throws IOException {
-        Parent customerSignPage = FXMLLoader.load(getClass().getResource("/sample/FXMLFiles/LoginSign.fxml"));
-        Scene driverSignScene = new Scene(customerSignPage);
-        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        appStage.setScene(driverSignScene);
-        appStage.show();
+        GetTheBooksBackToStudent studentSaverAtTheEnd = new SaveBooksToStudent();
+        studentSaverAtTheEnd.addBooksBackToStudent();
+        FileResource fr = new FileResource(
+                "/home/ihsang/Documents/Cs Kg/OOP/FinalLibrary/src/sample/Data/LoggedStudent.txt");
+        for (String line : fr.lines()) {
+            lineRemover.removeTheLine(line,
+                    "/home/ihsang/Documents/Cs Kg/OOP/FinalLibrary/src/sample/Data/LoggedStudent.txt");
+        }
+        pageChanger.changeThePageTo("/sample/FXMLFiles/LoginSign.fxml", event);
+
+
     }
 
     @FXML
     void getBookButtonPressed(ActionEvent event) throws IOException {
-        Parent customerSignPage = FXMLLoader.load(getClass().getResource("/sample/FXMLFiles/StudentOnes/StudentBookList.fxml"));
-        Scene driverSignScene = new Scene(customerSignPage);
-        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        appStage.setScene(driverSignScene);
-        appStage.show();
+        pageChanger.changeThePageTo("/sample/FXMLFiles/StudentOnes/StudentGetsBook.fxml", event);
     }
 
     @FXML
-    void listBooksButtonPressed(ActionEvent event) {
-
+    void listBooksButtonPressed(ActionEvent event) throws IOException {
+        String booksOfLoggedStudent = lastLineGetter.getLastLine("/home/ihsang/Documents/Cs Kg/OOP/FinalLibrary/src/sample/Data/LoggedStudent.txt");
+        if (booksOfLoggedStudent.equals("") || booksOfLoggedStudent.equals(" ")) {
+            pageChanger.changeThePageTo("/sample/FXMLFiles/StudentOnes/StudentBookList.fxml", event);
+        }
+        else {
+            pageChanger.changeThePageTo("/sample/FXMLFiles/StudentOnes/ListBooksStudentHas.fxml",event);
+        }
     }
 
     public void initialize() throws IOException {
-        String sCurrentLine;
 
-        BufferedReader br = new BufferedReader(new FileReader("/home/ihsang/Documents/Cs Kg/OOP/FinalLibrary/src/sample/Data/StudentsData.txt"));
-        String lastLine = "";
-
-        while ((sCurrentLine = br.readLine()) != null)
-        {
-            System.out.println(sCurrentLine);
-            lastLine = sCurrentLine;
-        }
+        String lastLine = lastLineGetter.getLastLine("/home/ihsang/Documents/Cs Kg/OOP/FinalLibrary/src/sample/Data/StudentsData.txt");
         lastLine = lastLine.substring(2);
-        int nameBeginIdx = lastLine.indexOf('\'')+1;
-        int nameEndIdx = lastLine.indexOf('\'',nameBeginIdx);
-        String name = lastLine.substring(nameBeginIdx,nameEndIdx);
 
-        int surnameBeginIdx = lastLine.indexOf('\'',nameEndIdx+1)+1;
-        int surnameEndIdx = lastLine.indexOf('\'',surnameBeginIdx);
-        String surname = lastLine.substring(surnameBeginIdx,surnameEndIdx);
+        GetTheObject objectGetter = new ObjectFormReturner();
 
-        int phoneNoBeginIdx = lastLine.indexOf('\'',surnameEndIdx+1)+1;
-        int phoneNoEndIdx = lastLine.indexOf('\'',phoneNoBeginIdx);
-        String phoneNo = lastLine.substring(phoneNoBeginIdx,phoneNoEndIdx);
-
-        
+        student = objectGetter.getStudentFromString(lastLine);
     }
 }

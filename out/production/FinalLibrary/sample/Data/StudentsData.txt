@@ -1,3 +1,4 @@
-2-Student{name='ihsan', surname='gokalp', phoneNumber='123', books=[]}
-2-Student{name='ihsan1', surname='gokalp', phoneNumber='123', books=[]}
-2-Student{name='ihsan', surname='gokalp', phoneNumber='234', books=[]}
+3-Student{name='ihsan', surname='gokalp', phoneNumber='234', books=[]}
+4-Student{name='ihsan', surname='gokalp', phoneNumber='345', books=[]}
+5-Student{name='burhan', surname='gokalp', phoneNumber='345', books=[Book{name='book8', author='book8', noOfPages='book8'}, Book{name='book5', author='book5', noOfPages='book5'}]}
+5-Student{name='ihsan', surname='gokalp', phoneNumber='123', books=[]}

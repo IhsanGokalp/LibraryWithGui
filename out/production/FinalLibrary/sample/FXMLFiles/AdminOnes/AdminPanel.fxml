@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="417.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.AdminControllers.AdminPanelController">
+   <children>
+      <VBox layoutX="70.0" layoutY="35.0" prefHeight="225.0" prefWidth="278.0">
+         <children>
+            <Label fx:id="questionLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="202.0" text="What do you want to do?">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="configureStudentsButton" mnemonicParsing="false" onAction="#configureStudentsButtonPressed" text="List / Configure Registered Students">
+               <VBox.margin>
+                  <Insets left="13.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="arrangeBooksButton" mnemonicParsing="false" onAction="#arrangeBooksButtonPressed" text="List / Arange Books In The Library">
+               <VBox.margin>
+                  <Insets left="22.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="addAdminButton" mnemonicParsing="false" onAction="#addAdminButtonPressed" text="Admin Settings">
+               <VBox.margin>
+                  <Insets left="80.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="backToLoginButton" mnemonicParsing="false" onAction="#backToLoginButtonPressed" text="Go Back To Login">
+               <VBox.margin>
+                  <Insets left="73.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</Pane>

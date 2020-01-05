@@ -2,15 +2,12 @@ package sample.Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
-import javafx.stage.Stage;
+import sample.NeededClasses.ImplOfInterfaces.PageChange;
+import sample.NeededClasses.Interfaces.ChangeThePage;
 
 import java.io.IOException;
 
@@ -26,19 +23,12 @@ public class LoginController {
 
     @FXML
     void open_signForm(ActionEvent event) throws IOException {
+        ChangeThePage pageChanger = new PageChange();
         if(StudentRadioButton.isSelected()) {
-            Parent driverSignPage = FXMLLoader.load(getClass().getResource("/sample/FXMLFiles/StudentOnes/StudentSign.fxml"));
-            Scene driverSignScene = new Scene(driverSignPage);
-            Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            appStage.setScene(driverSignScene);
-            appStage.show();
+            pageChanger.changeThePageTo("/sample/FXMLFiles/StudentOnes/StudentSign.fxml", event);
         }
         else if (AdminRadioButton.isSelected()) {
-            Parent customerSignPage = FXMLLoader.load(getClass().getResource("/sample/FXMLFiles/AdminOnes/AdminSign.fxml"));
-            Scene driverSignScene = new Scene(customerSignPage);
-            Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            appStage.setScene(driverSignScene);
-            appStage.show();
+            pageChanger.changeThePageTo("/sample/FXMLFiles/AdminOnes/AdminSign.fxml",event);
         }
         else{
         }
