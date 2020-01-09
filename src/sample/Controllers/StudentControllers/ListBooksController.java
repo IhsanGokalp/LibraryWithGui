@@ -44,9 +44,11 @@ public class ListBooksController {
         GetTheObject objectReturner = new ObjectFormReturner();
 
         for (String line : fr.lines()) {
-
-            Book currBook = objectReturner.getBookFromString(line);
-            books.add(currBook);
+            System.out.println("Book:" + line + "/");
+            if (!line.equals("") && !line.equals(" ")){
+                Book currBook = objectReturner.getBookFromString(line);
+                books.add(currBook);
+            }
         }
         booksListView.setItems(books);
         booksListView.getSelectionModel().selectedItemProperty().addListener(

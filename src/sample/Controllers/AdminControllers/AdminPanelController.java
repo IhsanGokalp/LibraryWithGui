@@ -30,12 +30,12 @@ public class AdminPanelController {
     }
 
     @FXML
-    void arrangeBooksButtonPressed(ActionEvent event) {
-
+    void arrangeBooksButtonPressed(ActionEvent event) throws IOException {
+        pageChanger.changeThePageTo("/sample/FXMLFiles/AdminOnes/BookConfigQuestion.fxml",event);
     }
 
     @FXML
-    void configureStudentsButtonPressed(ActionEvent event) {
-
+    void configureStudentsButtonPressed(ActionEvent event) throws IOException {
+        pageChanger.changeThePageTo("/sample/FXMLFiles/AdminOnes/StudentSettings.fxml",event);
     }
 }

@@ -10,4 +10,5 @@ public interface GetTheObject {
     int getPhoneEndIdx();
     int getPageEndIdx();
     Admin getAdminFromString(String line);
+    Student getStudentWithBooks(String line);
 }

@@ -2,13 +2,18 @@ package sample.NeededClasses.ImplOfInterfaces;
 
 import sample.NeededClasses.Admin;
 import sample.NeededClasses.Book;
+import sample.NeededClasses.ImplOfInterfaces.Student.BookSaver;
 import sample.NeededClasses.Interfaces.GetTheObject;
+import sample.NeededClasses.Interfaces.Student.SaveBooksOfStudent;
 import sample.NeededClasses.Student;
+
+import java.util.ArrayList;
 
 public class ObjectFormReturner implements GetTheObject {
 
     private int phoneEndIdx;
     private int pageEndIdx;
+
     @Override
     public Student getStudentFromString(String studentInProgress) {
         int nameBeginIdx = studentInProgress.indexOf('\'')+1;
@@ -63,5 +68,17 @@ public class ObjectFormReturner implements GetTheObject {
         int authorNameEndIdx = line.indexOf('\'', authorNameBeginIdx);
         String author = line.substring(authorNameBeginIdx,authorNameEndIdx);
         return new Admin(bookName,author);
+    }
+
+    public Student getStudentWithBooks(String line) {
+        Student std = getStudentFromString(line);
+        SaveBooksOfStudent booksOfStudent = new BookSaver();
+        String booksInStr = booksOfStudent.getBooksOfStudentAsStr(line);
+        System.out.println(booksInStr);
+        ArrayList<Book> books = booksOfStudent.getBooksFromStr(booksInStr);
+        for (Book book : books) {
+            std.addBook(book);
+        }
+        return std;
     }
 }

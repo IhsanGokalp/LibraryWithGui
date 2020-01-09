@@ -1,1 +1,4 @@
+Admin{adminName='as', password='as'}
+Admin{adminName='da', password='huh'}
+Admin{adminName='sa', password='ad'}
 Admin{adminName='ad', password='ad'}

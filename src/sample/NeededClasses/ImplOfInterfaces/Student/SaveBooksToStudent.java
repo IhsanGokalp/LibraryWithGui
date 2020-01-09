@@ -14,29 +14,32 @@ import java.io.IOException;
 
 public class SaveBooksToStudent implements GetTheBooksBackToStudent {
 
+    GetTheLastLine lastLineGetter = new LastLineReturner();
+    GetTheObject objectReturner = new ObjectFormReturner();
+    RemovingTheLine lineRemover = new LineRemover();
+    UpdateTheData dataUpdater = new DataUpdater();
+
+    private String lastStudentOfFile;
+
     @Override
     public void addBooksBackToStudent() throws IOException {
-        GetTheLastLine lastLineGetter = new LastLineReturner();
-        String studentToBeAdded = lastLineGetter.getLastLine(
+        lastStudentOfFile = lastLineGetter.getLastLine(
                 "/home/ihsang/Documents/Cs Kg/OOP/FinalLibrary/src/sample/Data/StudentsData.txt");
 
-        GetTheObject objectReturner = new ObjectFormReturner();
-        Student student = objectReturner.getStudentFromString(studentToBeAdded);
+        Student student = objectReturner.getStudentFromString(lastStudentOfFile);
 
         FileResource fr = new FileResource(
                 "/home/ihsang/Documents/Cs Kg/OOP/FinalLibrary/src/sample/Data/LoggedStudent.txt");
         for (String line : fr.lines()) {
-            if (!line.equals("")||!line.equals(" ")){
+            if (!line.equals("") && !line.equals(" ")){
+                System.out.println("Book:"+line+"/");
                 Book book = objectReturner.getBookFromString(line);
                 student.addBook(book);
             }
         }
-
-        RemovingTheLine lineRemover = new LineRemover();
-        lineRemover.removeTheLine(studentToBeAdded,
+        lineRemover.removeTheLine(lastStudentOfFile,
                 "/home/ihsang/Documents/Cs Kg/OOP/FinalLibrary/src/sample/Data/StudentsData.txt");
-        UpdateTheData dataUpdater = new DataUpdater();
-        dataUpdater.addLinetoSpecificData(studentToBeAdded.substring(0,2) + student.toString(),
+        dataUpdater.addLinetoSpecificData(lastStudentOfFile.substring(0,2) + student.toString(),
                 "/home/ihsang/Documents/Cs Kg/OOP/FinalLibrary/src/sample/Data/StudentsData.txt");
     }
 }

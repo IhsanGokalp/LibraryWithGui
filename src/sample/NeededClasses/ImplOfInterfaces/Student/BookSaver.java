@@ -4,6 +4,7 @@ import sample.NeededClasses.Book;
 import sample.NeededClasses.ImplOfInterfaces.ObjectFormReturner;
 import sample.NeededClasses.Interfaces.GetTheObject;
 import sample.NeededClasses.Interfaces.Student.SaveBooksOfStudent;
+import sample.NeededClasses.Student;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -19,8 +20,8 @@ public class BookSaver implements SaveBooksOfStudent {
         for(Book book : books) {
             bfWriter.write(book.toString());
             bfWriter.newLine();
-            bfWriter.close();
         }
+        bfWriter.close();
     }
 
     @Override
@@ -28,13 +29,17 @@ public class BookSaver implements SaveBooksOfStudent {
         GetTheObject objectGetter = new ObjectFormReturner();
         ArrayList<Book> bookList = new ArrayList<Book>();
         int bookIdx = booksInStr.indexOf("Book");
-        System.out.println(bookIdx);
         while (bookIdx>=0) {
-
+            System.out.println("Book In Str:" + booksInStr + "//");
             Book book = objectGetter.getBookFromString(booksInStr);
+            System.out.println(book);
             bookList.add(book);
             int pageEndIdx = objectGetter.getPageEndIdx();
             bookIdx = booksInStr.indexOf("Book",pageEndIdx);
+            System.out.println("BOOK IDX:" + bookIdx);
+            if (bookIdx != -1)
+                booksInStr = booksInStr.substring(bookIdx);
+            System.out.println(booksInStr+"\n");
         }
         return bookList;
     }
@@ -43,7 +48,6 @@ public class BookSaver implements SaveBooksOfStudent {
     public String getBooksOfStudentAsStr(String lastLine) {
         GetTheObject objectGetter = new ObjectFormReturner();
         int phoneNoEndIdx = objectGetter.getPhoneEndIdx();
-        System.out.println(phoneNoEndIdx);
         int booksBeginIdx = lastLine.indexOf('[',phoneNoEndIdx+1)+1;
         int booksEndIdx = lastLine.indexOf(']',booksBeginIdx);
         String books = lastLine.substring(booksBeginIdx,booksEndIdx);
@@ -56,4 +60,5 @@ public class BookSaver implements SaveBooksOfStudent {
         ArrayList<Book> yoSAyHi = getBooksFromStr(ans);
         saveBooksOfStudent(yoSAyHi);
     }
+
 }

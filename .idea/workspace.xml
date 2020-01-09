@@ -2,61 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/AdminDeleteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/AdminPanelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/AdminRegistrationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/AdminSettingsQuestionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/DeleteAdminInfoPaneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/OnlyAdminDeleteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/StudentControllers/BookReviewPaneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/StudentControllers/GetBookFromLibrary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/StudentControllers/ListBookPaneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/StudentControllers/ListBooksController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/FXMLFiles/AdminOnes/AdminDelete.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/FXMLFiles/AdminOnes/AdminInfoPane.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/FXMLFiles/AdminOnes/AdminPanel.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/FXMLFiles/AdminOnes/AdminRegistration.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/FXMLFiles/AdminOnes/AdminSettingsQuestion.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/FXMLFiles/AdminOnes/OnlyAdminDeletePane.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/FXMLFiles/StudentOnes/ListBooksStudentHas.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/FXMLFiles/StudentOnes/StudentViewsOwnBooks.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/NeededClasses/ImplOfInterfaces/Admin/AdminValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/NeededClasses/ImplOfInterfaces/DataUpdater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/NeededClasses/ImplOfInterfaces/LastLineReturner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/NeededClasses/ImplOfInterfaces/LineRemover.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/NeededClasses/ImplOfInterfaces/ObjectFormReturner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/NeededClasses/ImplOfInterfaces/PageChange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/NeededClasses/ImplOfInterfaces/Student/BookSaver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/NeededClasses/ImplOfInterfaces/Student/SaveBooksToStudent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/NeededClasses/Interfaces/Admin/IsAdminValid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/NeededClasses/Interfaces/ChangeThePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/NeededClasses/Interfaces/GetTheLastLine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/NeededClasses/Interfaces/GetTheObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/NeededClasses/Interfaces/RemovingTheLine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/NeededClasses/Interfaces/Student/GetTheBooksBackToStudent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/NeededClasses/Interfaces/Student/SaveBooksOfStudent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/NeededClasses/Interfaces/UpdateTheData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/AdminRegistersBookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/BookBorrowedByStudentReviewPaneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/BookConfigController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/BooksWithStudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/DeleteBookFromLibraryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/DeleteBookInfoPaneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/NoStudentPaneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/StudentInfoPaneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/StudentSettingsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Data/BooksToBeAdded.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/FXMLFiles/AdminOnes/AdminAddsBookToLibrary.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/FXMLFiles/AdminOnes/AdminBookDelete.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/FXMLFiles/AdminOnes/AdminCheckBookWithStudentPane.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/FXMLFiles/AdminOnes/BookConfigQuestion.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/FXMLFiles/AdminOnes/BooksWithStudent.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/FXMLFiles/AdminOnes/NoStudentRegisteredController.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/FXMLFiles/AdminOnes/StudentInfoPaneOnAdmin.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/FXMLFiles/AdminOnes/StudentSettings.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/NeededClasses/ImplOfInterfaces/Admin/StudentRemoverToEnd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/NeededClasses/Interfaces/Admin/GetStudentToLastLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/META-INF/FinalLibrary.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/META-INF/FinalLibrary.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/AdminControllers/AdminSignController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/AdminControllers/AdminSignController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/StudentControllers/StudentLibraryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/StudentControllers/StudentLibraryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/StudentControllers/StudentSignController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/StudentControllers/StudentSignController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/AdminControllers/AdminPanelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/AdminControllers/AdminPanelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/AdminControllers/AdminRegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/AdminControllers/AdminRegistrationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/StudentControllers/BookReviewPaneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/StudentControllers/BookReviewPaneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/StudentControllers/ListBookPaneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/StudentControllers/ListBookPaneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/StudentControllers/ListBooksController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/StudentControllers/ListBooksController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/StudentControllers/ListBooksController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Controllers/StudentControllers/ListBooksController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Data/AdminsData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Data/AdminsData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Data/LibraryBooks.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Data/LibraryBooks.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Data/StudentsData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/Data/StudentsData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/FXMLFiles/StudentOnes/StudentLibrary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/FXMLFiles/StudentOnes/StudentLibrary.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/NeededClasses/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/NeededClasses/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/AdminSignController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/AdminSignController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/StudentControllers/StudentEmptyBookList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/StudentControllers/StudentEmptyBookList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/StudentControllers/StudentLibraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/StudentControllers/StudentLibraryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/StudentControllers/StudentSignController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/StudentControllers/StudentSignController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/NeededClasses/ImplOfInterfaces/LineRemover.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/NeededClasses/ImplOfInterfaces/LineRemover.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/NeededClasses/ImplOfInterfaces/ObjectFormReturner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/NeededClasses/ImplOfInterfaces/ObjectFormReturner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/NeededClasses/ImplOfInterfaces/Student/BookSaver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/NeededClasses/ImplOfInterfaces/Student/BookSaver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/NeededClasses/ImplOfInterfaces/Student/SaveBooksToStudent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/NeededClasses/ImplOfInterfaces/Student/SaveBooksToStudent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FinalLibrary/sample/NeededClasses/Interfaces/GetTheObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalLibrary/sample/NeededClasses/Interfaces/GetTheObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/AdminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/AdminPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/AdminRegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/AdminControllers/AdminRegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/StudentControllers/BookReviewPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/StudentControllers/BookReviewPaneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/StudentControllers/ListBookPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/StudentControllers/ListBookPaneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/StudentControllers/ListBooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/StudentControllers/ListBooksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Data/AdminsData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Data/AdminsData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Data/LibraryBooks.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Data/LibraryBooks.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Data/StudentsData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Data/StudentsData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FXMLFiles/StudentOnes/StudentLibrary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXMLFiles/StudentOnes/StudentLibrary.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/NeededClasses/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/NeededClasses/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/NeededClasses/ImplOfInterfaces/LineRemover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/NeededClasses/ImplOfInterfaces/LineRemover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/NeededClasses/ImplOfInterfaces/ObjectFormReturner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/NeededClasses/ImplOfInterfaces/ObjectFormReturner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/NeededClasses/ImplOfInterfaces/Student/BookSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/NeededClasses/ImplOfInterfaces/Student/BookSaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/NeededClasses/ImplOfInterfaces/Student/SaveBooksToStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/NeededClasses/ImplOfInterfaces/Student/SaveBooksToStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/NeededClasses/Interfaces/GetTheObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/NeededClasses/Interfaces/GetTheObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/NeededClasses/Interfaces/Student/SaveBooksOfStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/NeededClasses/Interfaces/Student/SaveBooksOfStudent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +157,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -359,7 +354,12 @@
       <workItem from="1577966116114" duration="8308000" />
       <workItem from="1578057154126" duration="4035000" />
       <workItem from="1578120787969" duration="14432000" />
-      <workItem from="1578210920607" duration="12208000" />
+      <workItem from="1578210920607" duration="24815000" />
+      <workItem from="1578388559444" duration="16440000" />
+      <workItem from="1578461133159" duration="727000" />
+      <workItem from="1578478010806" duration="4853000" />
+      <workItem from="1578559442570" duration="12424000" />
+      <workItem from="1578586260866" duration="1728000" />
     </task>
     <servers />
   </component>
@@ -381,38 +381,42 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="524" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1578233445519">
+    <state x="524" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1578479964288">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="524" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1578233445519" />
+    <state x="524" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1578479964288" />
     <state x="399" y="125" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1577726209478">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="399" y="125" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/67.27.1299.741@67.27.1299.741" timestamp="1577726209478" />
-    <state width="1253" height="229" key="GridCell.Tab.0.bottom" timestamp="1578233917921">
+    <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578309287913">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="229" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1578233917921" />
-    <state width="1253" height="229" key="GridCell.Tab.0.center" timestamp="1578233917920">
+    <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1299.741@67.27.1299.741" timestamp="1578309287913" />
+    <state width="1253" height="200" key="GridCell.Tab.0.bottom" timestamp="1578587588529">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="229" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1578233917920" />
-    <state width="1253" height="229" key="GridCell.Tab.0.left" timestamp="1578233917919">
+    <state width="1253" height="200" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1578587588529" />
+    <state width="1253" height="200" key="GridCell.Tab.0.center" timestamp="1578587588528">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="229" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1578233917919" />
-    <state width="1253" height="229" key="GridCell.Tab.0.right" timestamp="1578233917920">
+    <state width="1253" height="200" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1578587588528" />
+    <state width="1253" height="200" key="GridCell.Tab.0.left" timestamp="1578587588528">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="229" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1578233917920" />
-    <state x="205" y="33" key="SettingsEditor" timestamp="1577726716453">
+    <state width="1253" height="200" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1578587588528" />
+    <state width="1253" height="200" key="GridCell.Tab.0.right" timestamp="1578587588528">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="205" y="33" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1577726716453" />
-    <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1578210919343">
+    <state width="1253" height="200" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1578587588528" />
+    <state x="205" y="33" key="SettingsEditor" timestamp="1578413673385">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1578210919343" />
+    <state x="205" y="33" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1578413673385" />
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1578586259861">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1578586259861" />
     <state x="484" y="316" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577780201465">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -421,10 +425,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="380" y="175" key="run.anything.popup/67.27.1299.741@67.27.1299.741" timestamp="1578212319982" />
-    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1578138365225">
+    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1578580911199">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1578138365225" />
+    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1578580911199" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

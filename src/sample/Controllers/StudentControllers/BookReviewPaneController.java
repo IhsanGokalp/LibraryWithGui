@@ -50,7 +50,7 @@ public class BookReviewPaneController {
         alert.setHeaderText(null);
         alert.showAndWait();
         if (alert.getResult() == ButtonType.OK) {
-            pageChanger.changeThePageTo("/sample/FXMLFiles/StudentOnes/StudentGetsBook.fxml",event);
+            pageChanger.changeThePageTo("/sample/FXMLFiles/StudentOnes/StudentLibrary.fxml",event);
         }
     }
 

@@ -22,6 +22,10 @@ public class AdminRegistrationController {
     @FXML private TextField retypedPasswordTextField;
     @FXML private Button goBackButton;
     ChangeThePage pageChanger = new PageChange();
+    RemovingTheLine lineRemover = new LineRemover();
+    GetTheObject objectReturner = new ObjectFormReturner();
+    UpdateTheData dataUpdater = new DataUpdater();
+    GetTheLastLine lastLineGetter = new LastLineReturner();
 
     @FXML
     void goBackButtonPressed(ActionEvent event) throws IOException {
@@ -30,37 +34,44 @@ public class AdminRegistrationController {
 
     @FXML
     void registerButtonPressed(ActionEvent event) throws IOException {
-        UpdateTheData dataUpdater = new DataUpdater();
-        GetTheLastLine lastLineGetter = new LastLineReturner();
 
-        String username = usernameTextField.getText();
-        String password = passwordTextField.getText();
-        String reTypedPassword = retypedPasswordTextField.getText();
+        String username = usernameTextField.getText().trim();
+        String password = passwordTextField.getText().trim();
+        String reTypedPassword = retypedPasswordTextField.getText().trim();
 
         boolean notRegistered = isAdminRegistered(username);
         System.out.println(notRegistered);
 
-        if (notRegistered && password.equals(reTypedPassword)) {
-            RemovingTheLine lineRemover = new LineRemover();
 
-            String currAdmin = lastLineGetter.getLastLine(
-                    "/home/ihsang/Documents/Cs Kg/OOP/FinalLibrary/src/sample/Data/AdminsData.txt");
-            lineRemover.removeTheLine(currAdmin,
-                    "/home/ihsang/Documents/Cs Kg/OOP/FinalLibrary/src/sample/Data/AdminsData.txt");
-            dataUpdater.addLinetoSpecificData(currAdmin,
-                    "/home/ihsang/Documents/Cs Kg/OOP/FinalLibrary/src/sample/Data/AdminsData.txt");
-            dataUpdater.addLinetoSpecificData((new Admin(username,password)).toString(),
-                    "/home/ihsang/Documents/Cs Kg/OOP/FinalLibrary/src/sample/Data/AdminsData.txt");
-            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Successfully initialized new admin user.", ButtonType.OK);
-            alert.setTitle("Registration Completed");
-            alert.setHeaderText(null);
-            alert.showAndWait();
-            if (alert.getResult() == ButtonType.OK) {
-                pageChanger.changeThePageTo("/sample/FXMLFiles/AdminOnes/AdminPanel.fxml",event);
+        if (notRegistered && password.equals(reTypedPassword)) {
+            if (!username.equals("") || !password.equals("") || !reTypedPassword.equals("")) {
+
+
+                String curAdmin = lastLineGetter.getLastLine(
+                        "/home/ihsang/Documents/Cs Kg/OOP/FinalLibrary/src/sample/Data/AdminsData.txt");
+                lineRemover.removeTheLine(curAdmin,
+                        "/home/ihsang/Documents/Cs Kg/OOP/FinalLibrary/src/sample/Data/AdminsData.txt");
+                dataUpdater.addLinetoSpecificData((new Admin(username, password)).toString(),
+                        "/home/ihsang/Documents/Cs Kg/OOP/FinalLibrary/src/sample/Data/AdminsData.txt");
+                dataUpdater.addLinetoSpecificData(curAdmin,
+                        "/home/ihsang/Documents/Cs Kg/OOP/FinalLibrary/src/sample/Data/AdminsData.txt");
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Successfully initialized new admin user.", ButtonType.OK);
+                alert.setTitle("Registration Completed");
+                alert.setHeaderText(null);
+                alert.showAndWait();
+                if (alert.getResult() == ButtonType.OK) {
+                    pageChanger.changeThePageTo("/sample/FXMLFiles/AdminOnes/AdminPanel.fxml", event);
+                }
+            }
+            else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Your data can be empty.", ButtonType.OK);
+                alert.setTitle("Wrong Data");
+                alert.setHeaderText(null);
+                alert.showAndWait();
             }
         }
         else if (notRegistered && !password.equals(reTypedPassword)){
-            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Passwords do not match.", ButtonType.OK);
+            Alert alert = new Alert(Alert.AlertType.WARNING, "Passwords do not match.", ButtonType.OK);
             alert.setTitle("Passwords Do Not Match");
             alert.setHeaderText(null);
             alert.showAndWait();
@@ -80,7 +91,6 @@ public class AdminRegistrationController {
 
     private boolean isAdminRegistered(String username) {
         FileResource fr = new FileResource("/home/ihsang/Documents/Cs Kg/OOP/FinalLibrary/src/sample/Data/AdminsData.txt");
-        GetTheObject objectReturner = new ObjectFormReturner();
         for (String line: fr.lines()) {
             if (!line.equals("") && !line.equals(" ")){
                 Admin currAdmin = objectReturner.getAdminFromString(line);
